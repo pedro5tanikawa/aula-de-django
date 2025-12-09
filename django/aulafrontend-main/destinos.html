@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/x-icon" href="/image/airplane.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Jornada Viagem | Destinos</title>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="image/logo.jfif" alt="logotipo jornada viagem" width="100" height="80">
+        </figure>
+        <h1>Jornada viagens</h1>
+        <p>Explorando o mundo com você!</p>
+    </header>
+    <nav class="navbar navbar-expand-lg" style="background-color: #1490e8;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-suitcase2 text-light"></i>
+                <i class="bi bi-airplane text-light"></i>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#pacotes">Pacotes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contato">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinos.html">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fotos.html">Fotos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Promoções
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ônibus</a></li>
+                            <li><a class="dropdown-item" href="#">Aéreo</a></li>
+                            <li><a class="dropdown-item" href="#">Cruzeiros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Cadastre-se</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section id="destinos">
+            <h2>💰 Tabela de preços 💰</h2>
+            <table class="table table-dark table-striped">
+                <caption>
+                    Confira nossos pacotes de viagem com preços imperdíveis!✈🌎
+                </caption>
+                <tr>
+                    <th>Destinos</th>
+                    <th>Pacote</th>
+                    <th>Preços</th>
+                </tr>
+                <tr>
+                    <td>Japão</td>
+                    <td>Hotel + Aéreo</td>
+                    <td>R$ 4000</td>
+                </tr>
+                <tr>
+                    <td>San Andreas</td>
+                    <td>Hotél + Aéreo</td>
+                    <td>R$ 7500</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <strong>
+                            Promoção especial!👯‍♂️ Descontos para grupos!
+                        </strong>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer class="fixed-bottom"> <!-- rodapé da página-->
+        <div class="footer-copy">
+            <p>&copy; 2025 Jornada de Viagens. <br>Todos os direitos reservados. ✈🌎</p>
+        </div>
+        <div class="footer-contato" id="contato">
+            <h2>Contato</h2>
+            <p>Email: contato@jornada.com.br</p>
+            <p>Telefone: (21)99999-9999</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" target="_blank"><img src="image/facebook.png" width="20"></a>
+            <a href="#" target="_blank"><img src="image/instagram.png" width="20"></a>
+            <a href="#" target="_blank"><img src="image/whatsapp.png" width="20"></a>
+        </div>
+    </footer>
+
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Sobre nós</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Somos especializados em criar experiências de viagem únicas e personalizadas, oferecendo roteiros que combinam conforto e aventura. Nosso objetivo é proporcionar momentos inesquecíveis, com um atendimento excepcional e viagens que transformam a forma de ver o mundo. Junte-se a nós e descubra novos destinos com tranquilidade e autenticidade!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

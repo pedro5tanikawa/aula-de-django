@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carrossel.css">
+    <title>Jornada Viagem | Home</title>
+    <link rel="icon" type="image/x-icon" href="/image/airplane.png">
+</head>
+
+<body>
+
+   
+    <header>
+        <figure>
+            <img src="image/logo.jfif" alt="logotipo jornada viagem" width="100" height="80">
+        </figure>
+        <h1>Jornada viagens</h1>
+        <p>Explorando o mundo com você!</p>
+    </header>
+
+    
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #1490e8;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-suitcase2 text-light"></i>
+                <i class="bi bi-airplane text-light"></i>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#pacotes">Pacotes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contato">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="destinos.html">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fotos.html">Fotos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Promoções
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ônibus</a></li>
+                            <li><a class="dropdown-item" href="#">Aéreo</a></li>
+                            <li><a class="dropdown-item" href="#">Cruzeiros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Cadastre-se</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <main> <!-- parte principal do texto-->
+        <section id="sobre">
+            <h2>Sobre nós</h2>
+            <p>Somos uma agência apaixonada por criar viagens inesquecíveis...</p>
+        </section>
+        <!---->
+        <section id="carrossel" class="container">
+            <article class="carousel">
+                <input type="radio" name="slides" checked="checked" id="slide-1">
+                <input type="radio" name="slides" id="slide-2">
+                <input type="radio" name="slides" id="slide-3">
+                <input type="radio" name="slides" id="slide-4">
+                <input type="radio" name="slides" id="slide-5">
+                <input type="radio" name="slides" id="slide-6">
+                <ul class="carousel__slides">
+                    <li class="carousel__slide">
+                        <figure>
+
+                            <img src="https://picsum.photos/id/1041/800/450" alt="Imagem aleatória com fundo simples">
+
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Tim Marshall</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+
+                            <img src="https://picsum.photos/id/1043/800/450"
+                                alt="Imagem aleatória com uma composição visual abstrata e cores variadas">
+
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Christian Joudrey</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+
+                            <img src="https://picsum.photos/id/1044/800/450"
+                                alt="Imagem de paisagem com árvores e céu claro">
+
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Steve Carter</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+
+                            <img src="https://picsum.photos/id/1045/800/450"
+                                alt="Imagem de uma paisagem com céu azul e algumas nuvens">
+
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Aleksandra Boguslawska</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+
+                            <img src="https://picsum.photos/id/1049/800/450"
+                                alt="Paisagem com montanhas, árvores e céu parcialmente nublado">
+
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Rosan Harmens</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+
+                            <img src="https://picsum.photos/id/1052/800/450"
+                                alt="Paisagem natural com montanhas, vegetação e céu parcialmente nublado">
+
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Annie Spratt</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <ul class="carousel__thumbnails">
+                    <li>
+                        <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150"
+                                alt="Imagem aleatória com fundo simples"></label>
+                    </li>
+                    <li>
+                        <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150"
+                                alt="Imagem aleatória com uma composição visual abstrata e cores variadas"></label>
+                    </li>
+                    <li>
+                        <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150"
+                                alt="Imagem de paisagem com árvores e céu claro"></label>
+                    </li>
+                    <li>
+                        <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150"
+                                alt="Imagem de uma paisagem com céu azul e algumas nuvens"></label>
+                    </li>
+                    <li>
+                        <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150"
+                                alt="Paisagem com montanhas, árvores e céu parcialmente nublado"></label>
+                    </li>
+                    <li>
+                        <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150"
+                                alt="Paisagem com montanhas, árvores e céu parcialmente nublado"></label>
+                    </li>
+                </ul>
+            </article>
+
+        </section>
+
+        <!---->
+        <section id="pacotes" class="configura1">
+            <h2>Ofertas da Semana</h2>
+            <article class="pacote">
+                <img src="image/japao.jpg" width="200" height="100">
+                <h3>Japão</h3>
+                <p>HOTEL + AÉREO</p>
+                <p class="preco">R$ 4.000</p>
+            </article>
+            <article class="pacote">
+                <img src="image/sanandreas.jpg" width="200" height="100">
+                <h3>San Andreas</h3>
+                <p>HOTEL + AÉREO</p>
+                <p class="preco">R$ 7.500</p>
+            </article>
+            <article class="pacote">
+                <img src="image/paraiba.jpg" width="200" height="100">
+                <h3>Paraíba</h3>
+                <p>ALL INCLUSE</p>
+                <p class="preco">R$ 1.500</p>
+            </article>
+            <article class="pacote">
+                <img src="image/manaus.jpg" width="200" height="100">
+                <h3>Manaus</h3>
+                <p>ALL INCLUSE + AÉREO</p>
+                <p class="preco">R$ 1.600</p>
+            </article>
+        </section>
+
+        <section id="midia">
+            <h2>Curta novas experiências</h2>
+            <video controls width="320" height="240" src="videos/deserto.mp4" type="video/mp4">
+                Seu navegador não suporta a tag video
+            </video>
+            <audio controls>
+                <source src="audios/viagem.mp3" type="audio/mp3">
+                Seu navegador não suporta a tag audio
+            </audio>
+        </section>
+    </main>
+    <aside class="mapa">
+        <h3>Onde Estamos</h3>
+        <div class="mapa-conteudo">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.263322282286!2d-43.453248223844476!3d-22.75560707936184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9967a99225f96f%3A0xec20bfc8ff090b46!2sSenac%20Nova%20Igua%C3%A7u!5e0!3m2!1spt-BR!2sbr!4v1740159273958!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <address>
+                Rua Cel. Carlos Matos, 86 <br>
+                Centro, Nova Iguaçu - RJ,<br>
+                Cep 26210-200
+            </address>
+        </div>
+    </aside>
+    <footer> <!-- rodapé da página-->
+        <div class="footer-copy">
+            <p>&copy; 2025 Jornada de Viagens. <br>Todos os direitos reservados. ✈🌎</p>
+        </div>
+        <div class="footer-contato" id="contato">
+            <h2>Contato</h2>
+            <p>Email: contato@jornada.com.br</p>
+            <p>Telefone: (21)99999-9999</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" target="_blank"><img src="image/facebook.png" width="20"></a>
+            <a href="#" target="_blank"><img src="image/instagram.png" width="20"></a>
+            <a href="#" target="_blank"><img src="image/whatsapp.png" width="20"></a>
+        </div>
+    </footer>
+    <!-- <script src="js/script.js"></script> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Sobre nós</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Somos especializados em criar experiências de viagem únicas e personalizadas, oferecendo roteiros que combinam conforto e aventura. Nosso objetivo é proporcionar momentos inesquecíveis, com um atendimento excepcional e viagens que transformam a forma de ver o mundo. Junte-se a nós e descubra novos destinos com tranquilidade e autenticidade!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
