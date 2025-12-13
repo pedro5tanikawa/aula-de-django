@@ -2,8 +2,12 @@ from django.shortcuts import render
 
 # Create your views here.
 def destinos(request):
+    contexto = {
+        'title' : 'Jornada Viagem | Cadastro'
+    }
     return render(
         request,
-        'destinos/index.html'
+        'destinos/index.html',
+        contexto,
     )
 
