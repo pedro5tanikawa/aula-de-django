@@ -1,21 +1,17 @@
 {% extends "global/base.html" %}
 
-    {% block corpo %}
-    
-
-    
-    
+    {% block formulario %}
     <main>
     <section class="container mt-5 mb-5">
-        <form name="teste" method="post" action="aula.js">
+        <form name="teste" method="post" action="{% url "gravar" %}">
+            {% csrf_token %}
             <label for="nome" class="form-label">Nome</label>
             <input type="text" name="nome" id="nome" class="form-control" required>
-            <label for="movel" class="form-label">Telefone</label>
-            <input type="tel" name="movel" id="movel" maxlength="11" class="form-control">
-            <label for="correio" class="form-label">Email</label>
-            <input type="email" name="correio" id="correio" class="form-control" required>
-            <hr>
-            <input type="button" class="btn btn-outline-secondary" value="Confirmar" onclick="exibirDados()">  
+            <label for="idade" class="form-label">Telefone</label>
+            <input type="number" name="idade" id="idade" maxlength="11" class="form-control">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" id="email" class="form-control" required>
+            <hr> 
             <input type="reset"  class="btn btn-outline-danger" value="Limpar">
             <input type="submit" class="btn btn-outline-success" value="Enviar">   
            
@@ -23,4 +19,4 @@
         </form>
     </section>
    </main>
-   {% endblock corpo %}
+   {% endblock formulario %}
