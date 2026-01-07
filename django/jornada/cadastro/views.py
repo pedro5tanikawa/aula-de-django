@@ -31,3 +31,26 @@ def exibe(request):
         'cadastro/mostrar.html',
         exibe_pessoas,
     )
+
+def atualizar(request, id):
+    pessoa = Pessoa.objects.get(id_pessoa=id)
+    pessoa.nome = request.POST.get('nome')
+    pessoa.idade = request.POST.get('idade')
+    pessoa.email = request.POST.get('email')
+    pessoa.save()
+
+    return exibe(request)
+
+def editar(request, id):
+    pessoa = Pessoa.objects.get(id_pessoa=id)
+    return render(
+        request,
+        'cadastro/editar.html',
+        {'pessoa': pessoa}
+    )
+
+def apagar(request, id):
+    pessoa = Pessoa.objects.get(id_pessoa=id)
+    pessoa.delete()
+
+    return exibe(request)
