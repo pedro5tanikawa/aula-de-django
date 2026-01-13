@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from cadastro.models import Pessoa
 
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 def cadastro(request):
     contexto = {
@@ -22,6 +23,8 @@ def gravar(request): #funçao para salvar os dados para a tabela
     
     return cadastro(request)
 
+
+@login_required
 def exibe(request):
     exibe_pessoas = {
         "pessoas": Pessoa.objects.all()

@@ -10,32 +10,33 @@
         <div class="container mt-4">
             <div class="row">
                 <div class="col-md-8">
+                    {% for artigo in artigos %}
                     <div class="card mb-4">
-                        <img src="https://st2.depositphotos.com/4881727/7380/i/450/depositphotos_73807295-stock-photo-swing-hang-from-coconut-tree.jpg" class="card-img-top" alt="Post 1">
+            
+                        <img src="{{ artigo.foto.url }}"
+                             class="card-img-top"
+                             alt="{{ artigo.tema }}">
+            
                         <div class="card-body">
-                            <h2 class="card-title">Descobrindo Lugares Inexplorados</h2>
-                            <p class="card-text">Explore destinos desconhecidos e fuja das rotas convencionais de viagem.</p>
-                            <a href="#" class="btn btn-primary">Leia mais</a>
+                            <h2 class="card-title">
+                                {{ artigo.tema }}
+                            </h2>
+            
+                            <p class="card-text">
+                                {{ artigo.conteudo|truncatewords:20 }}
+                            </p>
+            
+                            <!-- Botão abre o modal -->
+                            <button type="button"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#descricaoModal{{ artigo.id }}">
+                                Leia mais
+                            </button>
                         </div>
                     </div>
-                    
-                    <div class="card mb-4">
-                        <img src="https://img.freepik.com/fotos-gratis/vista-de-cima-em-uma-mesa-cheia-de-comida_23-2149209253.jpg" class="card-img-top" alt="Post 2">
-                        <div class="card-body">
-                            <h2 class="card-title">Culinária pelo Mundo</h2>
-                            <p class="card-text">Conheça os sabores exóticos e receitas tradicionais de diferentes culturas.</p>
-                            <a href="#" class="btn btn-primary">Leia mais</a>
-                        </div>
-                    </div>
-                    
-                    <div class="card mb-4">
-                        <img src="https://previews.123rf.com/images/splitov27/splitov272111/splitov27211103006/180056150-c%C3%A1lculo-de-despesas-de-viagem-economia-calculadora-com-banco-de-porquinho-avi%C3%A3o-no-fundo-azul.jpg" class="card-img-top" alt="Post 3">
-                        <div class="card-body">
-                            <h2 class="card-title">Dicas para Economizar em Viagens</h2>
-                            <p class="card-text">Saiba como viajar gastando menos sem abrir mão do conforto e da diversão.</p>
-                            <a href="#" class="btn btn-primary">Leia mais</a>
-                        </div>
-                    </div>
+                    {% endfor %}
+            
                 </div>
                 
                 <div class="col-md-4">
@@ -58,6 +59,27 @@
         </div>
 
     </main>
+    {% for artigo in artigos %}
+<!-- Modal -->
+<div class="modal fade" id="descricaoModal{{ artigo.id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">{{ artigo.tema }}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            {{ artigo.conteudo }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
     {% endblock corpo %}
 
     
