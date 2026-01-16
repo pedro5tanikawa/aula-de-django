@@ -1,0 +1,113 @@
+{% extends 'global/base.html' %}
+{#
+Este template herda o layout base do projeto,
+garantindo menu, estilos e estrutura padrão
+#}
+
+
+{% block corpo %}
+<div class="container mt-4">
+
+
+    <h1 class="mb-4">🛒 Seu Carrinho</h1>
+
+
+    {# Verifica se existem itens no carrinho #}
+    {% if itens %}
+
+
+    <table class="table table-bordered table-striped align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Preço Unitário</th>
+                <th>Total</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            {# Percorre todos os itens do carrinho #}
+            {% for item in itens %}
+            <tr>
+                <td>
+                    {{ item.produto.tema }}
+                </td>
+
+
+                <td>
+                    {{ item.quantidade }}
+                </td>
+
+
+                <td>
+                    R$ {{ item.produto.preco }}
+                </td>
+
+
+                <td>
+                    R$ {{ item.total_preco }}
+                </td>
+
+
+                <td>
+                    <a href="{% url 'remover_do_carrinho' item.id %}"
+                       class="btn btn-danger btn-sm">
+                        Remover
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+    <div class="text-end">
+        <h3>Total da Compra: <strong>R$ {{ total }}</strong></h3>
+    </div>
+
+
+    <div class="mt-4 d-flex gap-2">
+        <a href="{% url 'finalizar_compra' %}"
+           class="btn btn-success">
+            Finalizar Compra (WhatsApp)
+        </a>
+
+
+        <a href="{% url 'blog' %}"
+           class="btn btn-primary">
+            Adicionar mais itens
+        </a>
+    </div>
+
+
+    {% else %}
+    {# Caso o carrinho esteja vazio #}
+    <div class="alert alert-warning">
+        Seu carrinho está vazio.
+    </div>
+
+
+    <a href="{% url 'blog' %}"
+       class="btn btn-primary">
+        Ver Pacotes
+    </a>
+    {% endif %}
+
+
+    {# Exibição de mensagens do Django #}
+    {% if messages %}
+        <div class="mt-4">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+
+</div>
+{% endblock corpo %}

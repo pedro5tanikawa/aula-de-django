@@ -1,0 +1,186 @@
+{% extends "global/base.html" %}
+
+   {% block corpo %}
+       
+    <main> <!-- parte principal do texto-->
+        <section id="sobre">
+            <h2>Sobre nós</h2>
+            <p>Somos uma agência apaixonada por criar viagens inesquecíveis...</p>
+        </section>
+        <!---->
+        <section id="carrossel" class="container">
+            <article class="carousel">
+                <input type="radio" name="slides" checked="checked" id="slide-1">
+                <input type="radio" name="slides" id="slide-2">
+                <input type="radio" name="slides" id="slide-3">
+                <input type="radio" name="slides" id="slide-4">
+                <input type="radio" name="slides" id="slide-5">
+                <input type="radio" name="slides" id="slide-6">
+                <ul class="carousel__slides">
+                    <li class="carousel__slide">
+                        <figure>
+
+                            <img src="https://picsum.photos/id/1041/800/450" alt="Imagem aleatória com fundo simples">
+
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Tim Marshall</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+
+                            <img src="https://picsum.photos/id/1043/800/450"
+                                alt="Imagem aleatória com uma composição visual abstrata e cores variadas">
+
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Christian Joudrey</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+
+                            <img src="https://picsum.photos/id/1044/800/450"
+                                alt="Imagem de paisagem com árvores e céu claro">
+
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Steve Carter</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+
+                            <img src="https://picsum.photos/id/1045/800/450"
+                                alt="Imagem de uma paisagem com céu azul e algumas nuvens">
+
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Aleksandra Boguslawska</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+
+                            <img src="https://picsum.photos/id/1049/800/450"
+                                alt="Paisagem com montanhas, árvores e céu parcialmente nublado">
+
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Rosan Harmens</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="carousel__slide">
+                        <figure>
+
+                            <img src="https://picsum.photos/id/1052/800/450"
+                                alt="Paisagem natural com montanhas, vegetação e céu parcialmente nublado">
+
+                            <figcaption>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                <span class="credit">Photo: Annie Spratt</span>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+                <ul class="carousel__thumbnails">
+                    <li>
+                        <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150"
+                                alt="Imagem aleatória com fundo simples"></label>
+                    </li>
+                    <li>
+                        <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150"
+                                alt="Imagem aleatória com uma composição visual abstrata e cores variadas"></label>
+                    </li>
+                    <li>
+                        <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150"
+                                alt="Imagem de paisagem com árvores e céu claro"></label>
+                    </li>
+                    <li>
+                        <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150"
+                                alt="Imagem de uma paisagem com céu azul e algumas nuvens"></label>
+                    </li>
+                    <li>
+                        <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150"
+                                alt="Paisagem com montanhas, árvores e céu parcialmente nublado"></label>
+                    </li>
+                    <li>
+                        <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150"
+                                alt="Paisagem com montanhas, árvores e céu parcialmente nublado"></label>
+                    </li>
+                </ul>
+            </article>
+
+        </section>
+
+        <!---->
+        <section id="pacotes" class="configura1">
+            <h2>Ofertas da Semana</h2>
+            <article class="pacote">
+                <img src="/static/global/img/japao.jpg" width="200" height="100">
+                <h3>Japão</h3>
+                <p>HOTEL + AÉREO</p>
+                <p class="preco">R$ 4.000</p>
+            </article>
+            <article class="pacote">
+                <img src="/static/global/img/sanandreas.jpg" width="200" height="100">
+                <h3>San Andreas</h3>
+                <p>HOTEL + AÉREO</p>
+                <p class="preco">R$ 7.500</p>
+            </article>
+            <article class="pacote">
+                <img src="/static/global/img/paraiba.jpg" width="200" height="100">
+                <h3>Paraíba</h3>
+                <p>ALL INCLUSE</p>
+                <p class="preco">R$ 1.500</p>
+            </article>
+            <article class="pacote">
+                <img src="/static/global/img/manaus.jpg" width="200" height="100">
+                <h3>Manaus</h3>
+                <p>ALL INCLUSE + AÉREO</p>
+                <p class="preco">R$ 1.600</p>
+            </article>
+        </section>
+
+        <section id="midia">
+            <h2>Curta novas experiências</h2>
+            <video controls width="320" height="240" src="/static/global/videos/deserto.mp4" type="video/mp4">
+                Seu navegador não suporta a tag video
+            </video>
+            <audio controls>
+                <source src="/static/global/audios/viagem.mp3" type="audio/mp3">
+                Seu navegador não suporta a tag audio
+            </audio>
+        </section>
+    </main>
+    <aside class="mapa">
+        <h3>Onde Estamos</h3>
+        <div class="mapa-conteudo">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.263322282286!2d-43.453248223844476!3d-22.75560707936184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9967a99225f96f%3A0xec20bfc8ff090b46!2sSenac%20Nova%20Igua%C3%A7u!5e0!3m2!1spt-BR!2sbr!4v1740159273958!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <address>
+                Rua Cel. Carlos Matos, 86 <br>
+                Centro, Nova Iguaçu - RJ,<br>
+                Cep 26210-200
+            </address>
+        </div>
+    </aside>
+    {% endblock corpo %}
+  <html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>

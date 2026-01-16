@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+{% include 'global/partials/head.html' %}
+<head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head><body>
+    {% include 'global/partials/header.html' %}
+    {% include 'global/partials/menu.html' %}
+
+    {% block corpo %} 
+    {% endblock corpo %}
+
+    <article class="container bg-secondary">
+    {% block formulario %}  {% endblock formulario %}
+    </article>
+    
+
+    {% include  'global/partials/footer.html' %}
+    <!-- <script src="js/script.js"></script> -->
+
+    <!-- Modal -->
+    {% include  'global/partials/modal.html' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+{% extends "global/base.html" %}
+
+    {% block corpo %} 
+
+    <main>
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for artigo in artigos %}
+                    <div class="card mb-4">
+            
+                        <img src="{{ artigo.foto.url }}"
+                             class="card-img-top"
+                             alt="{{ artigo.tema }}">
+            
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                {{ artigo.tema }}
+                            </h2>
+            
+                            <p class="card-text">
+                                {{ artigo.conteudo|truncatewords:20 }}
+                            </p>
+            
+                            <!-- Botão abre o modal -->
+                            <button type="button"
+                                    class="btn btn-primary"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#descricaoModal{{ artigo.id }}">
+                                Leia mais
+                            </button>
+                            <a href="{% url 'adicionar_ao_carrinho' artigo.id %}" class="btn btn-success"> Adicionar ao carrinho </a>
+                            <p class="mt-2 fw-bold">
+                                R$ {{artigo.preco}}
+                            </p>
+                            
+                        </div>
+                    </div>
+                    {% endfor %}
+            
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-header">Sobre o Blog</div>
+                        <div class="card-body">
+                            <p>Um espaço dedicado a compartilhar experiências e dicas sobre viagens pelo mundo.</p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header">Categorias</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Destinos</li>
+                            <li class="list-group-item">Gastronomia</li>
+                            <li class="list-group-item">Dicas de Viagem</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal para exibir a descrição -->
+{% for artigo in artigos %}
+<!-- Modal -->
+<div class="modal fade" id="descricaoModal{{ artigo.id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">{{ artigo.tema }}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            {{ artigo.conteudo }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+
+
+
+
+    {% endblock corpo %}
+
+ 

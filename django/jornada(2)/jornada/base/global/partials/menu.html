@@ -1,0 +1,95 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #1490e8;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <i class="bi bi-suitcase2 text-light"></i>
+            <i class="bi bi-airplane text-light"></i>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#pacotes">Pacotes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#contato">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'destinos' %}">Destinos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'fotos' %}">Fotos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Promoções
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Ônibus</a></li>
+                        <li><a class="dropdown-item" href="#">Aéreo</a></li>
+                        <li><a class="dropdown-item" href="#">Cruzeiros</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cadastro' %}">Cadastre-se</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'mostrar' %}">Mostrar dados</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'ver_carrinho' %}">Ver carrinho</a>
+                </li>
+                
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <span class="nav-link active text-light">
+                        Usuário: {{ user.get_username }}
+                    </span>
+                </li>
+
+
+                <li class="nav-item">
+                    <form method="post" action="{% url 'logout' %}" class="d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-link nav-link text-light p-0 mt-2">
+                            Logout
+                        </button>
+                    </form>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link active text-light" href="{% url 'login'%}?next={{request.path}}">
+                        Login
+                    </a>
+                </li>
+                {% endif %}
+
+                
+          
+                
+            </ul>
+        </div>
+    </div>
+</nav><html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
