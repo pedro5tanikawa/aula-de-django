@@ -4,6 +4,7 @@ from .models import CarrinhoItem
 from django.contrib import messages
 from urllib.parse import quote
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 
 
@@ -23,8 +24,11 @@ def adicionar_ao_carrinho(request, produto_id):
     #
     # Isso evita erros e garante mais segurança à aplicação
 
-
-    item, criado = CarrinhoItem.objects.get_or_create(produto=produto)
+    item, criado = CarrinhoItem.objects.get_or_create(
+        usuario = request.user,
+        produto = produto,
+    )
+    #item, criado = CarrinhoItem.objects.get_or_create(produto=produto)
     # Tenta localizar um item do carrinho relacionado a esse produto
     #
     # Se o produto ainda NÃO estiver no carrinho:
@@ -60,7 +64,8 @@ def ver_carrinho(request):
     # Função responsável por exibir os itens que estão no carrinho
 
 
-    itens = CarrinhoItem.objects.all()
+    itens = CarrinhoItem.objects.filter(usuario = request.user)
+    #itens = CarrinhoItem.objects.all()
     # Recupera todos os itens armazenados no carrinho
     # Cada item representa um produto adicionado pelo usuário
 
@@ -89,7 +94,12 @@ def remover_do_carrinho(request, item_id):
     # Recebe o ID do item que será excluído
 
 
-    item = get_object_or_404(CarrinhoItem, id=item_id)
+    item = get_object_or_404(
+        CarrinhoItem,
+        id = item_id,
+        usuario = request.user,
+    )
+    #item = get_object_or_404(CarrinhoItem, id=item_id)
     # Busca o item no carrinho pelo ID
     # Caso o item não exista, retorna erro 404 automaticamente
 
@@ -109,7 +119,8 @@ def finalizar_compra(request):
     # e redireciona o usuário para o WhatsApp
 
 
-    itens = CarrinhoItem.objects.all()
+    itens = CarrinhoItem.objects.filter(usuario = request.user)
+    #itens = CarrinhoItem.objects.all()
     # Recupera todos os itens que estão no carrinho
 
 
@@ -152,7 +163,7 @@ def finalizar_compra(request):
     # Simula o fechamento do pedido
 
 
-    whatsapp_url = f"https://wa.me/5521998200102?text={mensagem}"
+    whatsapp_url = f"https://wa.me/5521964956967?text={mensagem}"
     # Cria a URL de redirecionamento para o WhatsApp
     # O número deve ser substituído pelo telefone da empresa
 

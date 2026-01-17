@@ -2,6 +2,7 @@ from django.db import models
 # Importa o módulo models do Django, que contém as classes
 # necessárias para criar modelos ligados ao banco de dados
 
+from django.contrib.auth.models import User
 from blog.models import Topico
 # Importa o model Topico do app blog
 
@@ -10,7 +11,11 @@ from blog.models import Topico
 class CarrinhoItem(models.Model):
     # Classe responsável por representar um item dentro do carrinho
     # Cada registro desta tabela será um produto adicionado ao carrinho
-
+    # relaciona o item do carrinho ao usuario
+    usuario = models.ForeignKey(
+        User,
+        on_delete = models.CASCADE
+    )
 
     produto = models.ForeignKey(
         Topico,
